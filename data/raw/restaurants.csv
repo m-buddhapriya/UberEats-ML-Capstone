@@ -1,0 +1,201 @@
+restaurant_id,restaurant_name,restaurant_category,restaurant_rating,city
+R0001,South Indian Corner,Cafe,3.5,Pune
+R0002,The Food Factory,Cafe,4.4,Hyderabad
+R0003,Biryani House,Fast Food,4.1,Delhi
+R0004,Cafe Delight,Cafe,4.9,Mumbai
+R0005,Chinese Wok,Chinese,3.8,Hyderabad
+R0006,The Food Factory,Healthy,3.1,Pune
+R0007,Cafe Delight,Fast Food,3.0,Bangalore
+R0008,South Indian Corner,Chinese,4.7,Mumbai
+R0009,Biryani House,Healthy,4.0,Chennai
+R0010,Cafe Delight,Healthy,4.6,Hyderabad
+R0011,Cafe Delight,Chinese,3.5,Chennai
+R0012,Chinese Wok,Italian,3.7,Hyderabad
+R0013,Taco Town,Fast Food,3.1,Hyderabad
+R0014,Biryani House,Healthy,4.9,Pune
+R0015,The Food Factory,Healthy,4.3,Pune
+R0016,South Indian Corner,Cafe,4.9,Pune
+R0017,Biryani House,Healthy,3.5,Delhi
+R0018,Spice Kitchen,Chinese,4.2,Hyderabad
+R0019,Taco Town,Healthy,4.4,Mumbai
+R0020,Spice Kitchen,Italian,3.6,Chennai
+R0021,South Indian Corner,Fast Food,4.7,Pune
+R0022,Chinese Wok,Fast Food,4.9,Pune
+R0023,Chinese Wok,Healthy,4.8,Chennai
+R0024,South Indian Corner,Indian,4.5,Chennai
+R0025,Burger Point,Indian,3.6,Hyderabad
+R0026,South Indian Corner,Chinese,3.6,Pune
+R0027,Taco Town,Indian,4.9,Chennai
+R0028,Pizza Hub,Chinese,3.0,Delhi
+R0029,Chinese Wok,Cafe,4.4,Delhi
+R0030,Healthy Bites,Chinese,4.4,Pune
+R0031,Taco Town,Indian,4.2,Chennai
+R0032,Taco Town,Healthy,5.0,Hyderabad
+R0033,Taco Town,Cafe,3.6,Hyderabad
+R0034,Cafe Delight,Indian,3.7,Hyderabad
+R0035,Taco Town,Chinese,3.2,Bangalore
+R0036,Chinese Wok,Italian,3.9,Pune
+R0037,Pizza Hub,Fast Food,3.5,Hyderabad
+R0038,Pizza Hub,Indian,3.7,Delhi
+R0039,Taco Town,Chinese,4.7,Chennai
+R0040,Spice Kitchen,Cafe,4.9,Mumbai
+R0041,Chinese Wok,Indian,3.4,Mumbai
+R0042,Chinese Wok,Indian,3.7,Hyderabad
+R0043,Biryani House,Fast Food,4.9,Mumbai
+R0044,The Food Factory,Chinese,3.1,Mumbai
+R0045,Burger Point,Italian,3.2,Bangalore
+R0046,Burger Point,Cafe,3.3,Delhi
+R0047,Spice Kitchen,Chinese,4.2,Delhi
+R0048,Burger Point,Cafe,3.3,Bangalore
+R0049,Biryani House,Indian,4.9,Bangalore
+R0050,South Indian Corner,Fast Food,3.9,Mumbai
+R0051,Burger Point,Fast Food,4.0,Pune
+R0052,Chinese Wok,Healthy,3.5,Chennai
+R0053,South Indian Corner,Italian,3.9,Chennai
+R0054,Burger Point,Fast Food,4.3,Mumbai
+R0055,Chinese Wok,Indian,4.5,Chennai
+R0056,Chinese Wok,Italian,4.5,Bangalore
+R0057,Taco Town,Chinese,4.2,Delhi
+R0058,Pizza Hub,Fast Food,4.8,Chennai
+R0059,Spice Kitchen,Italian,4.6,Mumbai
+R0060,Biryani House,Indian,4.5,Pune
+R0061,Cafe Delight,Healthy,3.1,Mumbai
+R0062,The Food Factory,Cafe,3.0,Hyderabad
+R0063,Burger Point,Cafe,3.4,Mumbai
+R0064,Burger Point,Indian,4.3,Bangalore
+R0065,South Indian Corner,Indian,3.8,Delhi
+R0066,South Indian Corner,Cafe,3.8,Delhi
+R0067,The Food Factory,Healthy,4.8,Chennai
+R0068,Burger Point,Italian,4.8,Bangalore
+R0069,Healthy Bites,Cafe,4.8,Hyderabad
+R0070,Biryani House,Indian,3.6,Bangalore
+R0071,Burger Point,Fast Food,4.4,Mumbai
+R0072,Pizza Hub,Chinese,3.5,Bangalore
+R0073,The Food Factory,Healthy,3.4,Bangalore
+R0074,Healthy Bites,Healthy,3.4,Hyderabad
+R0075,Biryani House,Fast Food,3.7,Mumbai
+R0076,Burger Point,Fast Food,3.9,Pune
+R0077,Cafe Delight,Indian,4.7,Pune
+R0078,Taco Town,Cafe,3.2,Delhi
+R0079,Pizza Hub,Italian,4.5,Chennai
+R0080,Cafe Delight,Healthy,4.1,Bangalore
+R0081,South Indian Corner,Healthy,3.6,Delhi
+R0082,South Indian Corner,Fast Food,4.0,Hyderabad
+R0083,Burger Point,Cafe,3.6,Pune
+R0084,South Indian Corner,Healthy,4.2,Bangalore
+R0085,Pizza Hub,Italian,3.9,Hyderabad
+R0086,Biryani House,Fast Food,3.3,Chennai
+R0087,Chinese Wok,Italian,3.2,Hyderabad
+R0088,Spice Kitchen,Cafe,4.1,Bangalore
+R0089,The Food Factory,Healthy,4.8,Chennai
+R0090,Biryani House,Chinese,3.7,Hyderabad
+R0091,Chinese Wok,Healthy,4.5,Chennai
+R0092,Healthy Bites,Cafe,4.3,Bangalore
+R0093,Pizza Hub,Healthy,4.9,Bangalore
+R0094,Cafe Delight,Healthy,4.6,Chennai
+R0095,Chinese Wok,Indian,4.1,Mumbai
+R0096,Pizza Hub,Healthy,4.3,Delhi
+R0097,Taco Town,Healthy,4.8,Hyderabad
+R0098,Cafe Delight,Italian,3.8,Hyderabad
+R0099,South Indian Corner,Chinese,3.7,Mumbai
+R0100,South Indian Corner,Italian,3.0,Mumbai
+R0101,Cafe Delight,Italian,4.7,Mumbai
+R0102,Healthy Bites,Fast Food,4.6,Pune
+R0103,Healthy Bites,Indian,3.2,Pune
+R0104,Healthy Bites,Italian,4.2,Chennai
+R0105,Chinese Wok,Cafe,3.9,Pune
+R0106,The Food Factory,Cafe,3.2,Bangalore
+R0107,Chinese Wok,Healthy,5.0,Chennai
+R0108,Burger Point,Fast Food,3.4,Hyderabad
+R0109,Spice Kitchen,Indian,3.1,Delhi
+R0110,Cafe Delight,Indian,4.2,Bangalore
+R0111,Biryani House,Healthy,4.5,Hyderabad
+R0112,Spice Kitchen,Cafe,3.1,Hyderabad
+R0113,Taco Town,Chinese,4.3,Chennai
+R0114,Chinese Wok,Fast Food,4.1,Mumbai
+R0115,Chinese Wok,Healthy,3.2,Mumbai
+R0116,Pizza Hub,Fast Food,3.3,Bangalore
+R0117,Spice Kitchen,Cafe,4.1,Mumbai
+R0118,Pizza Hub,Cafe,3.6,Hyderabad
+R0119,Biryani House,Chinese,4.9,Mumbai
+R0120,Pizza Hub,Chinese,4.6,Pune
+R0121,Spice Kitchen,Indian,5.0,Mumbai
+R0122,Cafe Delight,Fast Food,3.5,Hyderabad
+R0123,Taco Town,Fast Food,4.9,Chennai
+R0124,Chinese Wok,Cafe,3.9,Bangalore
+R0125,Biryani House,Indian,3.7,Delhi
+R0126,Chinese Wok,Healthy,3.1,Mumbai
+R0127,Burger Point,Fast Food,3.1,Hyderabad
+R0128,Taco Town,Indian,4.4,Delhi
+R0129,The Food Factory,Indian,3.9,Delhi
+R0130,Pizza Hub,Cafe,3.5,Pune
+R0131,South Indian Corner,Indian,4.2,Delhi
+R0132,Spice Kitchen,Chinese,3.5,Chennai
+R0133,Chinese Wok,Chinese,4.2,Hyderabad
+R0134,Pizza Hub,Italian,3.7,Hyderabad
+R0135,Biryani House,Cafe,4.6,Mumbai
+R0136,Chinese Wok,Healthy,4.6,Mumbai
+R0137,The Food Factory,Italian,4.0,Mumbai
+R0138,Taco Town,Chinese,3.7,Chennai
+R0139,Taco Town,Italian,3.7,Delhi
+R0140,Chinese Wok,Cafe,4.6,Delhi
+R0141,Biryani House,Cafe,3.7,Pune
+R0142,Taco Town,Indian,3.4,Chennai
+R0143,Taco Town,Fast Food,3.2,Mumbai
+R0144,The Food Factory,Indian,3.9,Bangalore
+R0145,Spice Kitchen,Cafe,4.0,Pune
+R0146,Biryani House,Chinese,4.7,Bangalore
+R0147,Biryani House,Healthy,3.4,Delhi
+R0148,Cafe Delight,Chinese,3.8,Pune
+R0149,Cafe Delight,Indian,4.6,Pune
+R0150,Taco Town,Healthy,4.6,Hyderabad
+R0151,South Indian Corner,Cafe,3.8,Delhi
+R0152,Cafe Delight,Chinese,3.9,Delhi
+R0153,Taco Town,Cafe,3.6,Chennai
+R0154,Healthy Bites,Healthy,4.9,Pune
+R0155,Burger Point,Healthy,3.2,Delhi
+R0156,Burger Point,Chinese,4.9,Pune
+R0157,Biryani House,Cafe,4.4,Chennai
+R0158,South Indian Corner,Italian,4.1,Chennai
+R0159,The Food Factory,Cafe,3.1,Hyderabad
+R0160,Spice Kitchen,Healthy,4.0,Pune
+R0161,Cafe Delight,Cafe,3.8,Delhi
+R0162,Healthy Bites,Indian,3.3,Delhi
+R0163,Taco Town,Italian,4.3,Pune
+R0164,South Indian Corner,Fast Food,4.9,Pune
+R0165,Biryani House,Indian,4.1,Pune
+R0166,Cafe Delight,Fast Food,4.4,Mumbai
+R0167,South Indian Corner,Chinese,3.1,Delhi
+R0168,Cafe Delight,Fast Food,3.8,Chennai
+R0169,Spice Kitchen,Cafe,3.2,Delhi
+R0170,Spice Kitchen,Fast Food,4.2,Mumbai
+R0171,The Food Factory,Healthy,4.9,Pune
+R0172,Burger Point,Indian,4.3,Hyderabad
+R0173,Pizza Hub,Indian,3.2,Pune
+R0174,Pizza Hub,Fast Food,3.7,Pune
+R0175,Cafe Delight,Indian,4.1,Mumbai
+R0176,The Food Factory,Healthy,3.8,Delhi
+R0177,Pizza Hub,Indian,4.7,Pune
+R0178,Biryani House,Fast Food,4.6,Delhi
+R0179,Pizza Hub,Italian,4.2,Bangalore
+R0180,Chinese Wok,Italian,3.7,Chennai
+R0181,Taco Town,Chinese,3.5,Delhi
+R0182,The Food Factory,Indian,3.2,Hyderabad
+R0183,Biryani House,Fast Food,3.7,Chennai
+R0184,South Indian Corner,Indian,3.8,Hyderabad
+R0185,Biryani House,Cafe,4.4,Pune
+R0186,Burger Point,Healthy,4.3,Chennai
+R0187,South Indian Corner,Indian,3.1,Delhi
+R0188,Healthy Bites,Indian,3.8,Chennai
+R0189,Taco Town,Italian,3.4,Pune
+R0190,Taco Town,Healthy,3.3,Mumbai
+R0191,Taco Town,Fast Food,4.7,Hyderabad
+R0192,Taco Town,Indian,3.1,Pune
+R0193,Cafe Delight,Italian,3.8,Mumbai
+R0194,Taco Town,Chinese,3.3,Chennai
+R0195,Taco Town,Healthy,4.8,Chennai
+R0196,Taco Town,Italian,4.1,Pune
+R0197,The Food Factory,Italian,3.5,Delhi
+R0198,Cafe Delight,Italian,4.0,Chennai
+R0199,Spice Kitchen,Indian,4.5,Delhi
+R0200,Biryani House,Indian,4.9,Delhi
