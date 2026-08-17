@@ -1,134 +1,194 @@
-# Uber Eats Data Schema Design
+# Day 1 — Data Schema Design
 
-## Overview
+## 1. Objective
 
-The Uber Eats synthetic dataset consists of seven related datasets.
+The Uber Eats synthetic dataset was designed as a relational data model.
 
-The schema is designed around Orders as the central transactional table.
-
----
-
-## Entities
-
-### Customers
-
-Primary Key:
-
-customer_id
-
-Contains customer demographic and membership information.
+The objective of the schema is to connect customers, restaurants, drivers,
+orders, deliveries, reviews, and payments so that the datasets can be joined
+for analytics and machine learning.
 
 ---
 
-### Restaurants
+# 2. Datasets
 
-Primary Key:
+The project contains seven datasets:
 
-restaurant_id
-
-Contains restaurant name, category, rating, and city.
-
----
-
-### Drivers
-
-Primary Key:
-
-driver_id
-
-Contains driver rating, vehicle type, and experience.
+1. Customers
+2. Restaurants
+3. Drivers
+4. Orders
+5. Deliveries
+6. Reviews
+7. Payments
 
 ---
 
-### Orders
+# 3. Primary Keys
 
-Primary Key:
+Each dataset has a unique identifier.
 
-order_id
+| Dataset | Primary Key |
+|---|---|
+| Customers | `customer_id` |
+| Restaurants | `restaurant_id` |
+| Drivers | `driver_id` |
+| Orders | `order_id` |
+| Deliveries | `delivery_id` |
+| Reviews | `review_id` |
+| Payments | `payment_id` |
 
-Foreign Keys:
-
-- customer_id → Customers.customer_id
-- restaurant_id → Restaurants.restaurant_id
-
-Orders represent customer transactions.
-
----
-
-### Deliveries
-
-Primary Key:
-
-delivery_id
-
-Foreign Keys:
-
-- order_id → Orders.order_id
-- driver_id → Drivers.driver_id
-
-Deliveries contain operational delivery information such as distance,
-preparation time, delivery time, traffic, and weather.
+Primary keys uniquely identify each record within a dataset.
 
 ---
 
-### Reviews
+# 4. Foreign Keys
 
-Primary Key:
+Foreign keys are used to connect related datasets.
 
-review_id
-
-Foreign Keys:
-
-- order_id → Orders.order_id
-- customer_id → Customers.customer_id
-
-Reviews contain customer ratings and textual feedback.
-
----
-
-### Payments
-
-Primary Key:
-
-payment_id
-
-Foreign Key:
-
-- order_id → Orders.order_id
-
-Payments contain payment method, payment amount, and tip amount.
+| Dataset | Foreign Key | References |
+|---|---|---|
+| Orders | `customer_id` | Customers.`customer_id` |
+| Orders | `restaurant_id` | Restaurants.`restaurant_id` |
+| Deliveries | `order_id` | Orders.`order_id` |
+| Deliveries | `driver_id` | Drivers.`driver_id` |
+| Reviews | `order_id` | Orders.`order_id` |
+| Reviews | `customer_id` | Customers.`customer_id` |
+| Payments | `order_id` | Orders.`order_id` |
 
 ---
 
-## Relationship Diagram
+# 5. Dataset-Level Schema
 
-Customers
-    |
-    | customer_id
-    ↓
-Orders
-    |
-    ├── restaurant_id → Restaurants
-    |
-    ├── order_id → Deliveries
-    |
-    ├── order_id → Reviews
-    |
-    └── order_id → Payments
+## Customers
 
-Deliveries
-    |
-    └── driver_id → Drivers
+| Column | Data Type | Key | Description |
+|---|---|---|---|
+| `customer_id` | String | PK | Unique customer identifier |
+| `age` | Integer | | Customer age |
+| `gender` | String | | Customer gender category |
+| `city` | String | | Customer city |
+| `membership_type` | String | | Customer membership category |
 
 ---
 
-## Design Principles
+## Restaurants
 
-The schema was designed to:
+| Column | Data Type | Key | Description |
+|---|---|---|---|
+| `restaurant_id` | String | PK | Unique restaurant identifier |
+| `restaurant_name` | String | | Restaurant name |
+| `restaurant_category` | String | | Restaurant/cuisine category |
+| `restaurant_rating` | Float | | Restaurant rating |
+| `city` | String | | Restaurant city |
 
-- Avoid unnecessary duplication
-- Maintain referential integrity
-- Use unique primary keys
-- Use foreign keys to connect related entities
-- Support analytical joins
-- Support downstream machine-learning workflows
+---
+
+## Drivers
+
+| Column | Data Type | Key | Description |
+|---|---|---|---|
+| `driver_id` | String | PK | Unique driver identifier |
+| `driver_rating` | Float | | Driver rating |
+| `vehicle_type` | String | | Vehicle used for delivery |
+| `experience_years` | Float | | Driver experience in years |
+
+---
+
+## Orders
+
+| Column | Data Type | Key | Description |
+|---|---|---|---|
+| `order_id` | String | PK | Unique order identifier |
+| `customer_id` | String | FK | Customer who placed the order |
+| `restaurant_id` | String | FK | Restaurant receiving the order |
+| `order_timestamp` | Datetime | | Date and time of order |
+| `order_amount` | Float | | Monetary value of order |
+| `number_of_items` | Integer | | Number of items in order |
+| `order_status` | String | | Current order status |
+
+---
+
+## Deliveries
+
+| Column | Data Type | Key | Description |
+|---|---|---|---|
+| `delivery_id` | String | PK | Unique delivery identifier |
+| `order_id` | String | FK | Order being delivered |
+| `driver_id` | String | FK | Driver handling the delivery |
+| `delivery_distance_km` | Float | | Delivery distance in kilometres |
+| `preparation_time_minutes` | Integer | | Restaurant preparation time |
+| `delivery_time_minutes` | Integer | | Total delivery time |
+| `traffic_condition` | String | | Traffic condition |
+| `weather` | String | | Weather condition |
+
+---
+
+## Reviews
+
+| Column | Data Type | Key | Description |
+|---|---|---|---|
+| `review_id` | String | PK | Unique review identifier |
+| `order_id` | String | FK | Order associated with review |
+| `customer_id` | String | FK | Customer submitting review |
+| `rating` | Integer | | Customer rating from 1 to 5 |
+| `review_text` | String | | Customer textual feedback |
+
+---
+
+## Payments
+
+| Column | Data Type | Key | Description |
+|---|---|---|---|
+| `payment_id` | String | PK | Unique payment identifier |
+| `order_id` | String | FK | Order associated with payment |
+| `payment_method` | String | | Payment method |
+| `payment_amount` | Float | | Amount paid |
+| `tip_amount` | Float | | Tip paid by customer |
+
+---
+
+# 6. Relationship Model
+
+The overall relationship structure is:
+
+```text
+                         ┌─────────────────┐
+                         │    Customers    │
+                         │   customer_id   │
+                         └────────┬────────┘
+                                  │
+                                  │ customer_id
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │     Orders      │
+                         │    order_id     │
+                         │   customer_id   │
+                         │  restaurant_id  │
+                         └──────┬───┬──────┘
+                                │   │
+                 restaurant_id  │   │ order_id
+                                │   │
+                                ▼   ├───────────────┐
+                     ┌──────────────┐               │
+                     │ Restaurants  │               │
+                     │restaurant_id │               │
+                     └──────────────┘               │
+                                                    │
+                      ┌─────────────────────────────┼──────────────┐
+                      │                             │              │
+                      ▼                             ▼              ▼
+              ┌───────────────┐            ┌──────────────┐ ┌──────────────┐
+              │  Deliveries   │            │   Reviews    │ │   Payments   │
+              │ delivery_id   │            │  review_id   │ │  payment_id  │
+              │   order_id    │            │   order_id   │ │   order_id   │
+              │   driver_id   │            │ customer_id  │ │              │
+              └───────┬───────┘            └──────────────┘ └──────────────┘
+                      │
+                      │ driver_id
+                      ▼
+               ┌──────────────┐
+               │   Drivers    │
+               │  driver_id   │
+               └──────────────┘

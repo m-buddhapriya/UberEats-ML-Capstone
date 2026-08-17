@@ -1,11 +1,22 @@
-# Prompt Engineering — Day 1
+# Day 1 — Prompt Engineering
 
-## Objective
+## 1. Objective
 
-Prompt engineering techniques were used to design and generate the Python
-synthetic data-generation script for the Uber Eats project.
+Prompt engineering was used to design and generate the Python script for
+creating the synthetic Uber Eats datasets.
 
-The techniques used were:
+The objective was to generate realistic, structured, and relational data
+that can later be used for:
+
+- Customer segmentation
+- Restaurant segmentation
+- Customer sentiment analysis
+- Delivery-time prediction
+- Tip prediction
+- Demand forecasting
+- Business recommendations
+
+The following prompting techniques were used:
 
 1. P.T.C.F. Prompting
 2. Role-Based Prompting
@@ -14,229 +25,81 @@ The techniques used were:
 
 ---
 
-# 1. P.T.C.F. Prompting
+# 2. P.T.C.F. Prompting
 
-## Persona
+P.T.C.F. was used to clearly define the requirements before generating the
+Python data-generation script.
 
-Act as a Senior Python Data Engineer with experience in synthetic data
-generation, relational data modeling, analytics pipelines, and machine
-learning datasets.
+## P — Persona
 
-## Task
+The model was assigned the following role:
 
-Create a Python data-generation script for an Uber Eats Operational &
-Customer Intelligence project.
+> Act as a Senior Python Data Engineer specializing in synthetic data
+> generation, data modeling, and analytics pipelines.
 
-The script should generate realistic synthetic data for Customers,
-Restaurants, Drivers, Orders, Deliveries, Reviews, and Payments.
+This establishes the expected technical perspective for the solution.
 
-## Context
+---
 
-The datasets will be used for:
+## T — Task
 
-- Customer segmentation
-- Restaurant segmentation
-- Customer review sentiment analysis
-- Delivery-time prediction
-- Tip prediction
-- Demand forecasting
-- Business recommendations
+The task was defined as:
 
-The datasets must maintain logical relationships using primary and foreign
-keys.
+> Create a Python script that generates realistic synthetic Uber Eats
+> operational and customer data.
 
-Important relationships include:
+The script needed to generate seven datasets:
 
-- Customers → Orders
-- Restaurants → Orders
-- Orders → Deliveries
-- Drivers → Deliveries
-- Orders → Reviews
-- Orders → Payments
+- Customers
+- Restaurants
+- Drivers
+- Orders
+- Deliveries
+- Reviews
+- Payments
 
-## Format
+---
 
-Return a complete Python script using Pandas and NumPy.
+## C — Context
 
-The script should:
+The following project context was provided:
+
+The generated data will be used for customer segmentation, restaurant
+segmentation, NLP sentiment analysis, delivery-time prediction, tip
+prediction, demand forecasting, and business analysis.
+
+The datasets must maintain realistic relationships using primary keys and
+foreign keys.
+
+Required relationships include:
+
+- Orders → Customers
+- Orders → Restaurants
+- Deliveries → Orders
+- Deliveries → Drivers
+- Reviews → Orders
+- Reviews → Customers
+- Payments → Orders
+
+---
+
+## F — Format
+
+The required output format was defined as:
 
 1. Import required libraries
-2. Generate each dataset separately
-3. Use consistent ID formats
-4. Maintain relationships between datasets
-5. Generate realistic numerical and categorical values
-6. Save datasets as CSV files under data/raw/
-7. Print the shape of each generated dataset
-8. Use clear comments and sections
-
----
-
-# 2. Role-Based Prompting
-
-## Prompt
-
-Act as a Senior Data Engineer specializing in synthetic marketplace and
-operational datasets.
-
-Design the data-generation pipeline with a focus on:
-
-- Relational integrity
-- Primary and foreign keys
-- Realistic value ranges
-- Reproducibility
-- Maintainable Python code
-- Pandas DataFrames
-- CSV outputs
-- Clear code organization
-
-The generated data should be suitable for downstream analytics and
-machine-learning tasks.
-
-## Application
-
-The role-based instructions influenced the structure of:
-
-src/generate_data.py
-
-The script separates the generation of each business entity and maintains
-relationships between datasets.
-
----
-
-# 3. Few-Shot Prompting
-
-## Prompt
-
-Use the following examples as the required ID format.
-
-Customer IDs:
-
-C0001
-C0002
-C0003
-
-Restaurant IDs:
-
-R0001
-R0002
-R0003
-
-Driver IDs:
-
-D0001
-D0002
-D0003
-
-Order IDs:
-
-O00001
-O00002
-O00003
-
-Delivery IDs:
-
-DEL00001
-DEL00002
-DEL00003
-
-Review IDs:
-
-REV00001
-REV00002
-REV00003
-
-Payment IDs:
-
-PAY00001
-PAY00002
-PAY00003
-
-Follow these patterns consistently when generating the datasets.
-
-## Application
-
-The generated Python script uses formatted identifiers such as:
-
-customer_id = C0001
-restaurant_id = R0001
-driver_id = D0001
-order_id = O00001
-
-This ensures consistent and readable identifiers across the project.
-
----
-
-# 4. Structured Output Prompting
-
-## Prompt
-
-Return the Python solution using the following structure:
-
-1. Import libraries
-2. Configuration
-3. Customers dataset
-4. Restaurants dataset
-5. Drivers dataset
-6. Orders dataset
-7. Deliveries dataset
-8. Reviews dataset
-9. Payments dataset
-10. Save datasets to CSV
+2. Configure random seed
+3. Generate Customers
+4. Generate Restaurants
+5. Generate Drivers
+6. Generate Orders
+7. Generate Deliveries
+8. Generate Reviews
+9. Generate Payments
+10. Save each dataset as CSV
 11. Print dataset shapes
 
-For every dataset:
+The generated CSV files should be stored under:
 
-- Create a Pandas DataFrame
-- Define the required columns
-- Maintain relationships with other datasets
-- Save the resulting DataFrame under data/raw/
-
-## Application
-
-The structure was followed in:
-
-src/generate_data.py
-
-The script contains separate generation sections for all seven datasets.
-
----
-
-# Prompt Engineering Outcome
-
-The four prompting techniques were combined to guide the design of the
-synthetic data-generation pipeline.
-
-The resulting pipeline generates seven related datasets:
-
-- customers.csv
-- restaurants.csv
-- drivers.csv
-- orders.csv
-- deliveries.csv
-- reviews.csv
-- payments.csv
-
-The datasets were subsequently validated for:
-
-- Missing values
-- Duplicate records
-- Duplicate primary IDs
-- Invalid foreign keys
-- Valid relationships between datasets
-- Reasonable numerical ranges
-- Valid order statuses
-
----
-
-# Reproducibility
-
-The data-generation process uses a fixed random seed so that the synthetic
-dataset can be reproduced consistently.
-
----
-
-# Data Generation Script
-
-The final generated script is:
-
-src/generate_data.py
+```text
+data/raw/
