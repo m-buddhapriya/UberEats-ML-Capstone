@@ -1,0 +1,9 @@
+ML Task,Model,Primary Metric,Score,Selected
+Sentiment Analysis,TF-IDF + Naive Bayes,F1,0.1111,No
+Sentiment Analysis,VADER,F1,0.8194,Yes
+Delivery Time Prediction,Linear Regression,RMSE,5.0256,No
+Delivery Time Prediction,Ridge Regression,RMSE,5.0255,Yes
+Delivery Time Prediction,Lasso Regression,RMSE,5.0418,No
+Delivery Time Prediction,Random Forest,RMSE,5.5748,No
+Demand Forecasting,ARIMA,RMSE,2.026,No
+Demand Forecasting,Prophet,RMSE,2.0174,Yes

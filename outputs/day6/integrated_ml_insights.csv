@@ -1,0 +1,7 @@
+Area,Key Finding,Business Implication
+Customer Segmentation,"Customer segments differ in ordering behavior, spending, and engagement.",Customer strategies can be tailored according to segment value and behavior.
+Restaurant Segmentation,"Restaurant clusters differ in revenue, order volume, ratings, and operational performance.",Operational attention can be prioritized toward underperforming restaurant groups.
+Customer Sentiment,VADER achieved stronger sentiment classification performance than the TF-IDF + Naive Bayes approach.,Automated sentiment monitoring can help identify customer experience issues.
+Customer Complaints,Delivery delays and food quality/freshness are the two largest complaint themes.,Reducing delivery delays and improving food freshness should be priority areas.
+Delivery Time Prediction,Delivery distance and preparation time are the strongest predictors of delivery time.,Improving preparation efficiency and managing long-distance deliveries can reduce delivery times.
+Demand Forecasting,"Demand is relatively similar between weekdays and weekends, but varies by specific days and hours.",Capacity planning should focus on specific high-demand days and hours rather than weekends alone.

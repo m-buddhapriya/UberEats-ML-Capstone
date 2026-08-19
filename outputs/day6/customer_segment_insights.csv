@@ -1,0 +1,2 @@
+cluster,cluster_name,total_orders,avg_order_value,total_spending,ordering_frequency,weekend_orders,late_night_orders,avg_rating_given
+1,Frequent High-Value Customers,13.01,1099.26,14247.73,4.37,4.06,4.01,3.88
