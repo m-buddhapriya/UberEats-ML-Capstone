@@ -1,0 +1,10 @@
+metric,value
+best_model,ARIMA
+arima_mae,1.4727674048079404
+arima_rmse,1.899868182383733
+arima_mape,51.68025743867708
+prophet_mae,1.4865778844292228
+prophet_rmse,1.9141724616376974
+prophet_mape,49.50699353217168
+forecast_horizon_hours,24
+forecast_total_orders,92.29485765197191
